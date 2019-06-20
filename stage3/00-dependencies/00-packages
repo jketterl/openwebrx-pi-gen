@@ -1,0 +1,1 @@
+git build-essential cmake libfftw3-dev python rtl-sdr netcat libitpp-dev libsndfile1-dev sox
