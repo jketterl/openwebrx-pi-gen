@@ -12,6 +12,7 @@ sudo make install
 popd
 popd
 rm -rf SoapySDR
+ldconfig
 
 git clone https://github.com/pothosware/SoapySDRPlay.git
 pushd SoapySDRPlay
@@ -23,6 +24,7 @@ sudo make install
 popd
 popd
 rm -rf SoapySDRPlay
+ldconfig
 
 git clone https://github.com/rxseger/rx_tools
 pushd rx_tools
