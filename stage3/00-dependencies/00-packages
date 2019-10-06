@@ -1,2 +1,3 @@
 git build-essential cmake libfftw3-dev python3 netcat libitpp-dev libsndfile1-dev sox libusb-dev
 rtl-sdr hackrf airspy
+vim
