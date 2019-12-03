@@ -43,6 +43,6 @@ diff -ur stage3.orig/rootfs/lib/systemd/system/varnish.service stage3/rootfs/lib
  LimitMEMLOCK=82000
 -ExecStart=/usr/sbin/varnishd -j unix,user=vcache -F -a :6081 -T localhost:6082 -f /etc/varnish/default.vcl -S /etc/varnish/secret -s malloc,256m
 +ExecStart=/usr/sbin/varnishd -j unix,user=vcache -F -a localhost:6081 -T localhost:6082 -f /etc/varnish/default.vcl -S /etc/varnish/secret -s malloc,256m
+ ExecReload=/usr/share/varnish/varnishreload
  ProtectSystem=full
  ProtectHome=true
- PrivateTmp=true
