@@ -1,52 +1,38 @@
 #!/usr/bin/env bash
 set -euxo pipefail
 
+function cmakebuild() {
+  pushd $1
+  mkdir build
+  pushd build
+  cmake ..
+  make
+  make install
+  popd
+  popd
+  rm -rf $1
+}
+
+
 pushd /tmp
+
 git clone https://github.com/pothosware/SoapySDR
-pushd SoapySDR
-mkdir build
-pushd build
-cmake ..
-make
-sudo make install
-popd
-popd
-rm -rf SoapySDR
+cmakebuild SoapySDR
 ldconfig
 
 git clone https://github.com/pothosware/SoapySDRPlay.git
-pushd SoapySDRPlay
-mkdir build
-pushd build
-cmake ..
-make
-sudo make install
-popd
-popd
-rm -rf SoapySDRPlay
+cmakebuild SoapySDRPlay
 ldconfig
 
 git clone https://github.com/pothosware/SoapyAirspy.git
-pushd SoapyAirspy
-mkdir build
-pushd build
-cmake ..
-make
-sudo make install
-popd
-popd
-rm -rf SoapyAirspy
+cmakebuild SoapyAirspy
+ldconfig
+
+git clone https://github.com/pothosware/SoapyAirspyHF.git
+cmakebuild SoapyAirspyHF
 ldconfig
 
 git clone https://github.com/rxseger/rx_tools
-pushd rx_tools
-mkdir build
-pushd build
-cmake ..
-make
-sudo make install
-popd
-popd
-rm -rf rx_tools
+cmakebuild rx_tools
 
 popd
