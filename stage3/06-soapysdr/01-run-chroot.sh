@@ -16,27 +16,27 @@ function cmakebuild() {
 
 pushd /tmp
 
-git clone https://github.com/pothosware/SoapySDR
+git clone --depth 1 https://github.com/pothosware/SoapySDR
 cmakebuild SoapySDR
 ldconfig
 
-git clone https://github.com/pothosware/SoapySDRPlay.git
+git clone --depth 1 https://github.com/pothosware/SoapySDRPlay.git
 cmakebuild SoapySDRPlay
 ldconfig
 
-git clone https://github.com/pothosware/SoapyAirspy.git
+git clone --depth 1 https://github.com/pothosware/SoapyAirspy.git
 cmakebuild SoapyAirspy
 ldconfig
 
-git clone https://github.com/airspy/airspyhf.git
+git clone --depth 1 https://github.com/airspy/airspyhf.git
 cmakebuild airspyhf -DINSTALL_UDEV_RULES=ON
 ldconfig
 
-git clone https://github.com/pothosware/SoapyAirspyHF.git
+git clone --depth 1 https://github.com/pothosware/SoapyAirspyHF.git
 cmakebuild SoapyAirspyHF
 ldconfig
 
-git clone https://github.com/rxseger/rx_tools
+git clone --depth 1 https://github.com/rxseger/rx_tools
 cmakebuild rx_tools
 
 popd

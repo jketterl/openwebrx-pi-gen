@@ -2,7 +2,7 @@
 set -euxo pipefail
 
 pushd /tmp
-git clone https://github.com/szechyjs/mbelib.git
+git clone --depth 1 https://github.com/szechyjs/mbelib.git
 pushd mbelib
 mkdir build
 pushd build

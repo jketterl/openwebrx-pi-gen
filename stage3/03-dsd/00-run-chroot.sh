@@ -2,7 +2,7 @@
 set -euxo pipefail
 
 pushd /tmp
-git clone https://github.com/f4exb/dsd
+git clone --depth 1 https://github.com/f4exb/dsd
 pushd dsd
 mkdir build
 pushd build

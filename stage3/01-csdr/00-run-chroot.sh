@@ -2,7 +2,7 @@
 set -euxo pipefail
 
 pushd /tmp
-git clone https://github.com/jketterl/csdr.git
+git clone --depth 1 https://github.com/jketterl/csdr.git
 pushd csdr
 make
 sudo make install

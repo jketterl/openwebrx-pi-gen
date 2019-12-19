@@ -2,7 +2,7 @@
 set -euxo pipefail
 
 pushd /tmp
-git clone https://github.com/jketterl/digiham.git
+git clone --depth 1 https://github.com/jketterl/digiham.git
 pushd digiham
 mkdir build
 pushd build
