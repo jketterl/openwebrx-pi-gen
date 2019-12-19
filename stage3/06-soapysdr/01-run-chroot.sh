@@ -5,7 +5,7 @@ function cmakebuild() {
   pushd $1
   mkdir build
   pushd build
-  cmake ..
+  cmake "${@:2}" ..
   make
   make install
   popd
@@ -26,6 +26,10 @@ ldconfig
 
 git clone https://github.com/pothosware/SoapyAirspy.git
 cmakebuild SoapyAirspy
+ldconfig
+
+git clone https://github.com/airspy/airspyhf.git
+cmakebuild airspyhf -DINSTALL_UDEV_RULES=ON
 ldconfig
 
 git clone https://github.com/pothosware/SoapyAirspyHF.git
