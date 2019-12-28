@@ -2,7 +2,7 @@
 set -euxo pipefail
 
 pushd /tmp
-git --depth 1 clone https://github.com/jketterl/owrx_connector.git
+git clone --depth 1 https://github.com/jketterl/owrx_connector.git
 pushd owrx_connector
 mkdir build
 pushd build
