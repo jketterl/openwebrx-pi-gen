@@ -31,7 +31,7 @@ do
 done
 
 # Ensure that the configuration file is an absolute path
-CONFIG_FILE=$(realpath -s "$CONFIG_FILE")
+CONFIG_FILE=$(realpath "$CONFIG_FILE")
 
 # Ensure that the confguration file is present
 if test -z "${CONFIG_FILE}"; then
