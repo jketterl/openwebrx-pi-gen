@@ -9,6 +9,5 @@ libfftw3-dev
 libitpp-dev
 libsndfile1-dev
 libusb-dev
-rtl-sdr
 hackrf
 airspy
