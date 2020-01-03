@@ -36,7 +36,4 @@ git clone --depth 1 https://github.com/pothosware/SoapyAirspyHF.git
 cmakebuild SoapyAirspyHF
 ldconfig
 
-git clone --depth 1 https://github.com/rxseger/rx_tools
-cmakebuild rx_tools
-
 popd
