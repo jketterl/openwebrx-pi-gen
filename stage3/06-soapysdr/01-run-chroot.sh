@@ -36,4 +36,8 @@ git clone --depth 1 https://github.com/pothosware/SoapyAirspyHF.git
 cmakebuild SoapyAirspyHF
 ldconfig
 
+git clone --depth 1 https://github.com/pothosware/SoapyRTLSDR.git
+cmakebuild SoapyRTLSDR
+ldconfig
+
 popd
