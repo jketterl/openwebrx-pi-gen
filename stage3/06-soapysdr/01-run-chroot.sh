@@ -40,4 +40,8 @@ git clone --depth 1 https://github.com/pothosware/SoapyRTLSDR.git
 cmakebuild SoapyRTLSDR -DCMAKE_CXX_STANDARD_LIBRARIES="-latomic"
 ldconfig
 
+git clone --depth 1 https://github.com/pothosware/SoapyRemote.git
+cmakebuild SoapyRemote
+ldconfig
+
 popd
