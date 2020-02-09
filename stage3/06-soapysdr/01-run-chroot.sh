@@ -37,7 +37,7 @@ cmakebuild SoapyAirspyHF
 ldconfig
 
 git clone --depth 1 https://github.com/pothosware/SoapyRTLSDR.git
-cmakebuild SoapyRTLSDR
+cmakebuild SoapyRTLSDR -DCMAKE_CXX_STANDARD_LIBRARIES="-latomic"
 ldconfig
 
 popd
