@@ -17,3 +17,6 @@ mkdir -p ${ROOTFS_DIR}/etc/openwebrx
 sed 's/temporary_directory = "\/tmp"/temporary_directory = "\/tmp\/openwebrx"/' < "${ROOTFS_DIR}/opt/openwebrx/config_webrx.py" > "${ROOTFS_DIR}/etc/openwebrx/config_webrx.py"
 install -m 644 "${ROOTFS_DIR}/opt/openwebrx/bookmarks.json" "${ROOTFS_DIR}/etc/openwebrx/bookmarks.json"
 install -m 644 "${ROOTFS_DIR}/opt/openwebrx/bands.json" "${ROOTFS_DIR}/etc/openwebrx/bands.json"
+
+# remove config from checkout to avoid confusion
+rm "${ROOTFS_DIR}/opt/openwebrx/config_webrx.py" "${ROOTFS_DIR}/opt/openwebrx/bookmarks.json" "${ROOTFS_DIR}/opt/openwebrx/bands.json"
