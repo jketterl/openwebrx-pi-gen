@@ -5,7 +5,7 @@ git clone https://github.com/jketterl/openwebrx.git "${ROOTFS_DIR}/opt/openwebrx
 
 on_chroot << EOF
 adduser --system --group --no-create-home --home /nonexistant openwebrx
-usermod -aG plugdev openwebrxEOF
+usermod -aG plugdev openwebrx
 EOF
 
 install -m 644 files/openwebrx.service	"${ROOTFS_DIR}/etc/systemd/system/openwebrx.service"
