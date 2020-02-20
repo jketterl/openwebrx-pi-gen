@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -euo pipefile
+set -euo pipefail
 
 # move openwebrx temporary file off into tmpfs (ramdisk)
 mkdir "${ROOTFS_DIR}/tmp/openwebrx"
