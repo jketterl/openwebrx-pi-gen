@@ -1,6 +1,6 @@
 --- stage3.orig/rootfs/etc/varnish/default.vcl	2019-10-05 23:52:57.084429607 +0200
 +++ stage3/rootfs/etc/varnish/default.vcl	2019-10-05 23:59:11.517818140 +0200
-@@ -13,16 +13,16 @@
+@@ -13,23 +13,22 @@
  vcl 4.0;
  
  # Default backend definition. Set this to point to your content server.
@@ -23,7 +23,17 @@
  }
  
  sub vcl_backend_response {
-@@ -38,3 +38,10 @@
+-    # Happens after we have read the response headers from the backend.
+-    #
+-    # Here you clean the response headers, removing silly Set-Cookie headers
+-    # and other mistakes your backend does.
++    if (beresp.http.content-type ~ "(text|javascript)") {
++        set beresp.do_gzip = true;
++    }
+ }
+ 
+ sub vcl_deliver {
+@@ -38,3 +37,10 @@
      #
      # You can do accounting or modifying the final object here.
  }
