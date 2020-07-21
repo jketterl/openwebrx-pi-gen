@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euxo pipefail
 
-DEB=wsjtx_2.1.2_armhf.deb
+DEB=wsjtx_2.2.2_armhf.deb
 
 apt-get -y purge --autoremove wsjtx wsjtx-data
 
