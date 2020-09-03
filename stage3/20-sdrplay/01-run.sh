@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
-cp files/install-lib.armv7l.patch "${ROOTFS_DIR}/tmp"
+cp files/install-lib.aarch64.patch "${ROOTFS_DIR}/tmp"
 
 echo "blacklist sdr_msi3101
 blacklist msi001
