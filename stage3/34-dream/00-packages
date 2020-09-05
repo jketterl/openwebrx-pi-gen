@@ -1,0 +1,8 @@
+qt5-default
+libpulse0
+libfaad2
+libopus0
+libpulse-dev
+libfaad-dev
+libopus-dev
+libfftw3-dev
