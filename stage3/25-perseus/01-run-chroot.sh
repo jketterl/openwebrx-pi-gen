@@ -2,7 +2,7 @@
 set -euo pipefail
 
 BUILD_PACKAGES="autoconf automake libtool"
-sudo apt-get -y install ${BUILD_PACKAGES}
+apt-get -y install ${BUILD_PACKAGES}
 
 pushd /tmp
 
@@ -19,4 +19,7 @@ rm -rf libperseus-sdr
 
 popd
 
-sudo apt-get -y purge ${BUILD_PACKAGES}
+usermod -a -G perseususb openwebrx
+usermod -a -G perseususb pi
+
+apt-get -y purge ${BUILD_PACKAGES}
