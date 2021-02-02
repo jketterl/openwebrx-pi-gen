@@ -11,3 +11,4 @@ libqt5serialport5
 libqt5sql5
 libqt5widgets5
 libgfortran3
+libboost-log1.67.0
